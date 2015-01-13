@@ -1,3 +1,33 @@
 //se necesita node.js para compilar un archivo stylus http://learnboost.github.io/stylus/
 // para compilar es $- stylus -c archivo.styl y para compilarlo en cada cambio es 
 //stylus -c -w archivo.styl 
+leonidas = #E8E8E8
+grisoscuro =#444
+azul=#22BCE0
+body 
+	background leonidas
+	color  grisoscuro
+	font-style Arial
+	font-size 16px
+header 
+	background grisoscuro
+	color white 
+	padding 0.5em 
+
+	.logo 
+		border-right 1px solid azul
+		width 60px
+		img 
+			width 52px
+
+	.titular
+		margin 0 80px 0 70px
+		.titulo
+			font-size 18px
+			font-weight normal
+			padding 0 
+			margin 0
+.left 
+	float left 
+.right 
+	float right		
