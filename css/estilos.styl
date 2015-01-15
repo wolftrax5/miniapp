@@ -4,6 +4,7 @@
 leonidas = #E8E8E8
 grisoscuro =#444
 azul=#22BCE0
+naranja= #DD4F24
 body 
 	background leonidas
 	color  grisoscuro
@@ -12,22 +13,68 @@ body
 header 
 	background grisoscuro
 	color white 
-	padding 0.5em 
+	overflow hidden 
+	padding 1em 
+	position relative 
+	//si coloco un objeto con pocicion relative y dentro tiene otro objeto con posicion absoluta el segundo objeto toma de referencia el objeto de posicion relativa
 
 	.logo 
 		border-right 1px solid azul
 		width 60px
+		position absolute
+		top 10px
 		img 
 			width 52px
 
 	.titular
-		margin 0 80px 0 70px
+		margin 0 60px 0 70px
+		.filtro
+			color azul
+			font-weight bold 
+			font-size 14px
+			font-style italic
+			text-decoration none
+		.publicar
+			background naranja
+			color white
+			font-size italic
+			margin -5px 1em 0 0
+			padding 0.2em 0.5em
+			text-decoration none
+			text-shadow 1px 1px 0px black
+			//text-shadow ocuade parametros cuanto se mueve la sombra en Y,X y cual es la difuminacion Z  y B el color de la sombra textshadow y x z b
 		.titulo
 			font-size 18px
 			font-weight normal
 			padding 0 
 			margin 0
+	.usuario
+		position absolute
+		top 10px
+		right 10px
+		.avatar
+			margin 0 1em 0 0 
+			position relative
+			 z-index 2 // z-index es un atributo que permite mover objetos hacia adelante o atras a mayor numero mas adelante
+			// z-index exije que la posiscion no esea estatica 				 
+			img 
+				width 50px
+				border-radius 50%
+		.flechita 
+			background naranja
+			color white
+			display block
+			position absolute
+			top 15px
+			right 0
+			text-align right
+			width 50%
+			
 .left 
 	float left 
 .right 
 	float right		
+footer
+	background red
+	.powered
+		font-size 18px
