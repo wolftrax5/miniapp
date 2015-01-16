@@ -6,11 +6,33 @@ grisoscuro =#444
 azul=#22BCE0
 naranja= #DD4F24
 gris_texto= #7A7A7A
+
+a 
+	color naranja
 body 
 	background leonidas
 	color  grisoscuro
 	font-style Arial
 	font-size 16px
+footer
+	background naranja
+	color rgba(white,0.5)
+	padding 1em 0
+	text-align center
+	width 100%
+
+	h3
+		font-size 14px
+		font-weight normal
+
+		strong
+			display block
+
+		.mejor
+			&:before
+			&:after
+				content " - "
+
 header 
 	background grisoscuro
 	box-shadow 0 5px 0 rgba(0,0,0,0.2)
@@ -76,6 +98,7 @@ nav
 	background azul
 	border-left 15px solid white
 	position relative
+
 	&:before // el & esta indicando al objeto nav el : es para "atributos"
 		border-bottom 20px solid transparent 
 		border-left 7px solid white	
@@ -92,6 +115,7 @@ nav
 		padding 0 // las ul tienen un padign por defecto a ala izquierda
 		overflow-x auto
 		white-space nowrap
+		
 		li 
 			display inline-block
 			a
@@ -109,11 +133,80 @@ nav
 		box-shadow 2px 2px 10px rgba(black,0.5)
 		color gris_texto
 		margin-bottom 1em 
+
+		.acciones
+			border-top 3px solid azul
+			padding 0.5em
+			overflow hidden
+			position relative
+			.datos
+				float right
+
+				.comentarios 
+					background gris_texto
+					border-bottom 3px solid red
+					color white 
+					margin 0 1em 0 0
+					padding 2px 5px
+					position relative
+					text-decoration none
+
+					
+					&:after
+						 border-bottom 20px solid green
+						 border-left 7px solid red	
+						 border-top 20px solid yellow
+					 	 content ""
+					 	 position absolute
+					 	 top 2px
+					 	 right 20px
+
+
+			.votos
+				float left
+
+				.down//lo que se esta haciendo 
+				.up//aqui es una herencia 
+					text-decoration none //para q no decore los textos
+
+				.down 
+					color red
+				.up 
+					color green
+		.descripccion 
+			color gris_texto
+			.detalles
+				height 160px //este es el alto fijo de la imagen
+				margin-left 130px /*como quiero moverlo 10 px de la imagen a la izquierda  
+				si solo le pongo un margen de 10 no los toma encuenta por q la imagen esta
+				flotando asi que le pongo el ancho de la imagen mas los px que quiero de espaci-->*/
+				.autor
+					margin 0.5em 0 2em 0
+				.fecha 
+					margin 0 1em 0 0 
+				.tag 
+					background azul
+					color white
+					border-radius 0.5em 
+					padding 0.2em 0.5em
+					text-decoration none
+				.titulo
+					color grisoscuro
+					font-size 18px 
+					font-style italic
+					margin 0 
+					padding 0.5em 0.5em 0 0 
+
+			.imagen
+				img
+					height 160px 
+					vertical-align top
+					width 120px
+
+
+
 .left 
 	float left 
 .right 
 	float right		
-footer
-	background red
-	.powered
-		font-size 18px
+
