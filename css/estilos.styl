@@ -6,6 +6,31 @@ grisoscuro =#444
 azul=#22BCE0
 naranja= #DD4F24
 gris_texto= #7A7A7A
+//Stylus soporta css normal 
+@font-face {
+	font-family: 'iconitos';
+	src:url('fonts/icomoon.eot?-krhqti');
+	src:url('fonts/icomoon.eot?#iefix-krhqti') format('embedded-opentype'),
+		url('fonts/icomoon.woff?-krhqti') format('woff'),
+		url('fonts/icomoon.ttf?-krhqti') format('truetype'),
+		url('fonts/icomoon.svg?-krhqti#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
 
 a 
 	color naranja
@@ -67,6 +92,11 @@ header
 			text-decoration none
 			text-shadow 1px 1px 0px black
 			//text-shadow ocuade parametros cuanto se mueve la sombra en Y,X y cual es la difuminacion Z  y B el color de la sombra textshadow y x z b
+			&:before 
+				display inline-block
+				content "\e908"
+				font-family "iconitos"
+				margin 0 2px 0 0 
 		.titulo
 			font-size 18px
 			font-weight normal
@@ -77,7 +107,7 @@ header
 		top 10px
 		right 10px
 		.avatar
-			margin 0 1em 0 0 
+			margin 0 1.3em 0 0 
 			position relative
 			 z-index 2 // z-index es un atributo que permite mover objetos hacia adelante o atras a mayor numero mas adelante
 			// z-index exije que la posiscion no esea estatica 				 
@@ -91,9 +121,15 @@ header
 			padding 0.2em 0.2em
 			position absolute
 			top 15px
-			right 0
 			text-align right
+			text-decoration none
+			right 0
 			width 50%
+			&:before
+				font-family "iconitos"
+				content "\e937"
+				text-shadow 1px 1px 0px black
+
 nav
 	background azul
 	border-left 15px solid white
@@ -143,7 +179,7 @@ nav
 				float right
 
 				.comentarios 
-					background gris_texto
+					background grisoscuro
 					border-bottom 3px solid red
 					color white 
 					margin 0 1em 0 0
@@ -151,7 +187,6 @@ nav
 					position relative
 					text-decoration none
 
-					
 					&:after
 						 border-bottom 20px solid green
 						 border-left 7px solid red	
@@ -160,7 +195,15 @@ nav
 					 	 position absolute
 					 	 top 2px
 					 	 right 20px
-
+				
+				.estrellita
+					text-decoration none
+					
+					&:after
+						font-family "iconitos"
+						font-size 1.2em
+						color yellow
+						content "\e9d9"
 
 			.votos
 				float left
@@ -168,11 +211,22 @@ nav
 				.down//lo que se esta haciendo 
 				.up//aqui es una herencia 
 					text-decoration none //para q no decore los textos
-
+					
 				.down 
 					color red
+					&:before
+						font-family "iconitos"
+						font-size 1.2em
+						content "\ea36"
+						vertical-align bottom 
 				.up 
 					color green
+					&:before
+						font-family "iconitos"
+						font-size 1.2em
+						content "\ea32"
+						vertical-align bottom 
+
 		.descripccion 
 			color gris_texto
 			.detalles
@@ -203,10 +257,7 @@ nav
 					vertical-align top
 					width 120px
 
-
-
 .left 
 	float left 
 .right 
-	float right		
-
+	float right	
