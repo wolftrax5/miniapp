@@ -257,6 +257,27 @@ nav
 					vertical-align top
 					width 120px
 
+@media screen and (min-width: 768px)
+
+	header
+		.titular
+			.publicar
+				padding-left 3em
+				position relative
+				
+				&:before
+					left 0px
+					font-size 2.5em
+					position absolute
+					top -10px
+
+	.posts 
+		.post
+			display inline-block
+			width 48%
+			vertical-align top
+			&:nth-child(odd)
+				margin-right 2%
 .left 
 	float left 
 .right 
